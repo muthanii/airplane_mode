@@ -15,8 +15,9 @@ class AirplaneFlight(WebsiteGenerator):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
-		from airplane_mode.airplane_mode.doctype.flight_crew_member.flight_crew_member import FlightCrewMember
 		from frappe.types import DF
+
+		from airplane_mode.airplane_mode.doctype.flight_crew_member.flight_crew_member import FlightCrewMember
 
 		airplane: DF.Link
 		amended_from: DF.Link | None

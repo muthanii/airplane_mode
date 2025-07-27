@@ -1,6 +1,6 @@
 <div style="border:1px solid #ccc; padding:10px; margin:10px;">
     <strong>Airline:</strong> {{ frappe.get_doc('Airplane', flight.airplane).airline }} <br>
-    <strong>From:</strong> {{ flight.source_airport_code }} 
+    <strong>From:</strong> {{ flight.source_airport_code }}
     → <strong>To:</strong> {{ flight.destination_airport_code }} <br>
     <strong>Date:</strong> {{ frappe.utils.format_date(flight.date_of_departure, "d MMMM, YYYY") }} <br>
     <strong>Time:</strong> {{ flight.time_of_departure }} <br>

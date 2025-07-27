@@ -41,15 +41,15 @@ class AirplaneTicket(Document):
 
 	def validate(self):
 		# Prevent duplicate add-ons
-		items = [d.item for d in self.add_ons] # pyright: ignore[reportAttributeAccessIssue]
+		items = [d.item for d in self.add_ons]  # pyright: ignore[reportAttributeAccessIssue]
 		if len(items) != len(set(items)):
 			frappe.throw("Each add-on type must be unique.")
 
 		# Prevent overboarding
 		if self.flight:
 			flight_doc = frappe.get_doc("Airplane Flight", self.flight)
-			airplane_doc = frappe.get_doc("Airplane", flight_doc.airplane) # pyright: ignore[reportAttributeAccessIssue]
-			capacity = airplane_doc.capacity # pyright: ignore[reportAttributeAccessIssue]
+			airplane_doc = frappe.get_doc("Airplane", flight_doc.airplane)  # pyright: ignore[reportAttributeAccessIssue]
+			capacity = airplane_doc.capacity  # pyright: ignore[reportAttributeAccessIssue]
 
 			# Count existing tickets (excluding this one if it's being updated)
 			existing_tickets = frappe.db.count(
