@@ -10,6 +10,7 @@
   "passenger",
   "source_airport_code",
   "seat",
+  "gate_number",
   "column_break_ottc",
   "status",
   "flight",
@@ -103,7 +104,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Booked\nChecked-In\nBoarded",
+   "options": "Booked\nChecked-In\nBoarded\nCompleted",
    "reqd": 1
   },
   {
@@ -142,13 +143,18 @@
    "fieldtype": "Data",
    "label": "Seat",
    "read_only": 1
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-19 12:45:40.590446",
+ "modified": "2025-07-27 12:57:37.037500",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
