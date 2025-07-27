@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:AirAsia-###",
+ "autoname": "format:{airline}-{###}",
  "creation": "2025-07-16 10:43:07.971435",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -38,7 +38,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-16 11:47:05.569681",
+ "modified": "2025-07-27 12:45:46.871875",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane",
