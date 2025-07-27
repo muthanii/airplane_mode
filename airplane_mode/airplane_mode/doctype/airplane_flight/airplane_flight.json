@@ -2,6 +2,7 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
+ "autoname": "format:{source_airport_code}-{destination_airport_code}-{###}",
  "creation": "2025-07-17 11:03:51.152020",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -19,7 +20,10 @@
   "source_airport",
   "source_airport_code",
   "destination_airport",
-  "destination_airport_code"
+  "destination_airport_code",
+  "default_gate_number",
+  "section_break_jmfl",
+  "crew_members"
  ],
  "fields": [
   {
@@ -112,6 +116,21 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
+  },
+  {
+   "fieldname": "default_gate_number",
+   "fieldtype": "Data",
+   "label": "Default Gate Number"
+  },
+  {
+   "fieldname": "section_break_jmfl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "crew_members",
+   "fieldtype": "Table",
+   "label": "Crew Members",
+   "options": "Flight Crew Member"
   }
  ],
  "grid_page_length": 50,
@@ -120,10 +139,11 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-17 11:38:33.729840",
+ "modified": "2025-07-27 13:08:37.460248",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
