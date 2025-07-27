@@ -28,27 +28,28 @@ class AirplaneTicket(Document):
 		duration_of_flight: DF.Duration
 		flight: DF.Link
 		flight_price: DF.Currency
+		gate_number: DF.Data | None
 		passenger: DF.Link
 		seat: DF.Data | None
 		source_airport_code: DF.Data
-		status: DF.Literal["Booked", "Checked-In", "Boarded"]
+		status: DF.Literal["Booked", "Checked-In", "Boarded", "Completed"]
 		total_amount: DF.Currency
 	# end: auto-generated types
 
 	def before_save(self):
-		self.total_amount = self.flight_price + sum(item.amount for item in self.add_ons or [])
+		self.total_amount = self.flight_price + sum(item.amount for item in self.add_ons or [])  # pyright: ignore[reportAttributeAccessIssue]
 
 	def validate(self):
 		# Prevent duplicate add-ons
-		items = [d.item for d in self.add_ons]
+		items = [d.item for d in self.add_ons] # pyright: ignore[reportAttributeAccessIssue]
 		if len(items) != len(set(items)):
 			frappe.throw("Each add-on type must be unique.")
 
 		# Prevent overboarding
 		if self.flight:
-			flight_doc = frappe.get_doc("Flight", self.flight)
-			airplane_doc = frappe.get_doc("Airplane", flight_doc.airplane)
-			capacity = airplane_doc.capacity
+			flight_doc = frappe.get_doc("Airplane Flight", self.flight)
+			airplane_doc = frappe.get_doc("Airplane", flight_doc.airplane) # pyright: ignore[reportAttributeAccessIssue]
+			capacity = airplane_doc.capacity # pyright: ignore[reportAttributeAccessIssue]
 
 			# Count existing tickets (excluding this one if it's being updated)
 			existing_tickets = frappe.db.count(
