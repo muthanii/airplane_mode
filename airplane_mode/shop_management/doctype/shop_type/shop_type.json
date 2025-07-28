@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{type_name}",
  "creation": "2025-07-27 15:25:19.262034",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -24,10 +25,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-27 15:25:43.332704",
+ "modified": "2025-07-28 18:25:06.607961",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Shop Type",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

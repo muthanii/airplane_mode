@@ -17,7 +17,7 @@ class Tenant(Document):
 		address: DF.SmallText | None
 		email: DF.Data | None
 		phone: DF.Data | None
-		tenant_name: DF.Data | None
+		tenant_name: DF.Data
 	# end: auto-generated types
 
 	pass

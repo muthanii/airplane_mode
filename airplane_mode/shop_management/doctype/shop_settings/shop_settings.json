@@ -12,7 +12,8 @@
   {
    "fieldname": "default_rent_amount",
    "fieldtype": "Currency",
-   "label": "Default Rent Amount"
+   "label": "Default Rent Amount",
+   "precision": "0"
   },
   {
    "default": "0",
@@ -25,7 +26,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-07-27 15:31:39.038133",
+ "modified": "2025-07-28 18:56:10.048132",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Shop Settings",

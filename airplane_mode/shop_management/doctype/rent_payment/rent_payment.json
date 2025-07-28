@@ -7,6 +7,7 @@
  "field_order": [
   "contract",
   "payment_date",
+  "rent_amount",
   "amount_paid",
   "month_for"
  ],
@@ -14,32 +15,50 @@
   {
    "fieldname": "contract",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Contract",
-   "options": "Contract"
+   "options": "Contract",
+   "reqd": 1
   },
   {
    "fieldname": "payment_date",
    "fieldtype": "Date",
-   "label": "Payment Date"
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1
   },
   {
    "fieldname": "amount_paid",
    "fieldtype": "Currency",
-   "label": "Amount Paid"
+   "label": "Amount Paid",
+   "non_negative": 1,
+   "precision": "0",
+   "reqd": 1
   },
   {
    "fieldname": "month_for",
-   "fieldtype": "Data",
-   "label": "Month For"
+   "fieldtype": "Select",
+   "label": "Month For",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "contract.rent_amount",
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount",
+   "precision": "0",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-27 15:52:23.051434",
+ "modified": "2025-07-28 19:23:56.331650",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Rent Payment",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {
