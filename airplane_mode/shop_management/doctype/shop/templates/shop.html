@@ -1,0 +1,13 @@
+{% extends "templates/web.html" %} {% block page_content %}
+<h1>{{ title |e }}</h1>
+<p><strong>Shop Number:</strong> {{ doc.shop_number }}</p>
+<p><strong>Airport:</strong> {{ doc.airport }}</p>
+<p><strong>Area (sqft):</strong> {{ doc.area_sqft }}</p>
+<p><strong>Type:</strong> {{ doc.shop_type }}</p>
+<p><strong>Tenant:</strong> {{ doc.tenant }}</p>
+<p><strong>Status:</strong> {{ doc.status }}</p>
+
+<p><a href="/shop-leads/new?shop={{ doc.name }}">Interested? Fill the lead form</a></p>
+{% endblock %}
+
+<!-- this is a sample default web page template -->
