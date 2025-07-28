@@ -1,6 +1,7 @@
 {
+ "app": "airplane_mode",
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Airplane Mode\"}}]",
+ "content": "[{\"id\":\"Z3hzcsj2Cg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airplane Mode</span>\",\"col\":12}},{\"id\":\"SiG-0B6wCB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airlines\",\"col\":4}},{\"id\":\"NaU0VtDKB5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airports\",\"col\":4}},{\"id\":\"-uTFYMgxRh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplanes\",\"col\":4}},{\"id\":\"xoZcVyKS7B\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Flights\",\"col\":6}},{\"id\":\"XDERl3Oxsh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tickets\",\"col\":6}}]",
  "creation": "2025-07-16 11:31:27.082643",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +14,7 @@
  "is_hidden": 0,
  "label": "Airplane Mode",
  "links": [],
- "modified": "2025-07-16 11:33:07.345382",
+ "modified": "2025-07-28 21:40:58.152352",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Mode",
@@ -24,6 +25,48 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 28.0,
- "shortcuts": [],
- "title": "Airplane Mode"
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Airplanes",
+   "link_to": "Airplane",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Flights",
+   "link_to": "Airplane Flight",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Airlines",
+   "link_to": "Airline",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Airports",
+   "link_to": "Airport",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tickets",
+   "link_to": "Airplane Ticket",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Airplane Mode",
+ "type": "Workspace"
 }
