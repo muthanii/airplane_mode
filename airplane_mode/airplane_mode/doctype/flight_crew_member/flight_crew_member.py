@@ -14,8 +14,8 @@ class FlightCrewMember(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		crew_member: DF.Data | None
-		designation: DF.Data | None
+		crew_member: DF.Data
+		designation: DF.Data
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
