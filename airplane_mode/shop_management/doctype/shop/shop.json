@@ -51,6 +51,7 @@
    "fieldname": "shop_type",
    "fieldtype": "Link",
    "label": "Shop Type",
+   "link_filters": "[[\"Shop Type\",\"enabled\",\"=\",1]]",
    "options": "Shop Type",
    "reqd": 1
   },
@@ -84,7 +85,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-07-28 21:21:43.643713",
+ "modified": "2025-07-30 20:28:17.214295",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Shop",
