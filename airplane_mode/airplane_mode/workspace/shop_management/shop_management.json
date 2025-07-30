@@ -1,7 +1,16 @@
 {
  "app": "airplane_mode",
- "charts": [],
- "content": "[{\"id\":\"kUzSM24aef\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Shop Management</span>\",\"col\":12}},{\"id\":\"u4nfpT1DLN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Available Shops\",\"col\":3}},{\"id\":\"hU-04cX8Xj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Occupied Shops\",\"col\":3}},{\"id\":\"_xlq1_uFMp\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contract Management</b></span>\",\"col\":12}},{\"id\":\"0ESJuSTI0n\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contract Expiry\",\"col\":3}}]",
+ "charts": [
+  {
+   "chart_name": "Availability of Shops",
+   "label": "Availability of Shops"
+  },
+  {
+   "chart_name": "Shops Per Airport",
+   "label": "Shops Per Airport"
+  }
+ ],
+ "content": "[{\"id\":\"L-72c0yiCC\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Shop Management</b></span>\",\"col\":12}},{\"id\":\"p2dcAO8OQ3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Shops Per Airport\",\"col\":12}},{\"id\":\"_xlq1_uFMp\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contract Management</b></span>\",\"col\":12}},{\"id\":\"QJ5Uog4pSL\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Availability of Shops\",\"col\":12}},{\"id\":\"0ESJuSTI0n\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contract Expiry\",\"col\":6}},{\"id\":\"guWFwwmwuq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tenants\",\"col\":6}},{\"id\":\"qAWDmiiLtd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shop Leads\",\"col\":6}}]",
  "creation": "2025-07-28 17:25:56.786030",
  "custom_blocks": [],
  "docstatus": 0,
@@ -15,7 +24,7 @@
  "label": "Shop Management",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-07-28 17:32:35.084828",
+ "modified": "2025-07-30 20:50:09.207465",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Shop Management",
@@ -29,29 +38,29 @@
  "shortcuts": [
   {
    "color": "Green",
-   "doc_view": "Dashboard",
-   "format": "{} Shops Available",
-   "label": "Available Shops",
-   "link_to": "Shop",
-   "stats_filter": "[[\"Shop\",\"status\",\"=\",\"Available\",false]]",
-   "type": "DocType"
-  },
-  {
-   "color": "Red",
    "doc_view": "List",
-   "format": "{} Shops Occupied",
-   "label": "Occupied Shops",
-   "link_to": "Shop",
-   "stats_filter": "[[\"Shop\",\"status\",\"=\",\"Occupied\",false]]",
+   "format": "{} Active This Month",
+   "label": "Contract Expiry",
+   "link_to": "Contract",
+   "stats_filter": "[[\"Contract\",\"end_date\",\"Timespan\",\"next 30 days\",false]]",
    "type": "DocType"
   },
   {
    "color": "Green",
    "doc_view": "List",
-   "format": "{} This Month",
-   "label": "Contract Expiry",
-   "link_to": "Contract",
-   "stats_filter": "[[\"Contract\",\"end_date\",\"Timespan\",\"this month\",false]]",
+   "format": "{} Available Tenants",
+   "label": "Tenants",
+   "link_to": "Tenant",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "format": "{} Leads Pending",
+   "label": "Shop Leads",
+   "link_to": "Shop Leads",
+   "stats_filter": "[]",
    "type": "DocType"
   }
  ],
